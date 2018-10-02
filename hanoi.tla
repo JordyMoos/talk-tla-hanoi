@@ -2,7 +2,7 @@
 EXTENDS TLC, Sequences, Integers
                 
 (* --algorithm hanoi
-variables tower = <<<<1, 2, 3>>, <<>>, <<>>>>, 
+variables tower = <<<<1, 2, 3, 4, 5, 6, 7, 8, 9, 10>>, <<>>, <<>>>>, 
 
 define 
   D == DOMAIN tower
@@ -10,7 +10,7 @@ end define;
 
 begin
 while TRUE do
-  assert tower[3] /= <<1, 2, 3>>;
+  assert tower[3] /= <<1, 2, 3, 4, 5, 6, 7, 8, 9, 10>>;
   with from \in {x \in D : tower[x] /= <<>>},
        to \in {
                 y \in D : 
